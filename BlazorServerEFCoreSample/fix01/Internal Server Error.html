@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://localhost:44318/ -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Internal Server Error</title>
+        <style>
+            body {
+    font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
+    font-size: .813em;
+    color: #222;
+    background-color: #fff;
+}
+
+h1 {
+    color: #44525e;
+    margin: 15px 0 15px 0;
+}
+
+h2 {
+    margin: 10px 5px 0 0;
+}
+
+h3 {
+    color: #363636;
+    margin: 5px 5px 0 0;
+    font-weight: normal;
+}
+
+code {
+    font-family: Consolas, "Courier New", courier, monospace;
+    font-weight: bold;
+}
+
+body .titleerror {
+    padding: 3px 3px 6px 3px;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+body .location {
+    margin: 3px 0 10px 30px;
+}
+
+#header {
+    font-size: 18px;
+    padding: 15px 0;
+    border-top: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    margin-bottom: 0;
+}
+
+    #header li {
+        display: inline;
+        margin: 5px;
+        padding: 5px;
+        color: #a0a0a0;
+        cursor: pointer;
+    }
+
+    #header .selected {
+        background: #44c5f2;
+        color: #fff;
+    }
+
+#stackpage ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    /*border-bottom: 1px #ddd solid;*/
+}
+
+#stackpage .details {
+    font-size: 1.2em;
+    padding: 3px;
+    color: #000;
+}
+
+#stackpage .stackerror {
+    padding: 5px;
+    border-bottom: 1px #ddd solid;
+}
+
+
+#stackpage .frame {
+    padding: 0;
+    margin: 0 0 0 30px;
+}
+
+    #stackpage .frame h3 {
+        padding: 2px;
+        margin: 0;
+    }
+
+#stackpage .source {
+    padding: 0 0 0 30px;
+}
+
+    #stackpage .source ol li {
+        font-family: Consolas, "Courier New", courier, monospace;
+        white-space: pre;
+        background-color: #fbfbfb;
+    }
+
+#stackpage .frame .source .highlight li span {
+    color: #FF0000;
+}
+
+#stackpage .source ol.collapsible li {
+    color: #888;
+}
+
+    #stackpage .source ol.collapsible li span {
+        color: #606060;
+    }
+
+#routingpage .subheader {
+    padding: 5px;
+    border-bottom: 1px #ddd solid;
+}
+
+.page table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 0 20px;
+}
+
+.page th {
+    vertical-align: bottom;
+    padding: 10px 5px 5px 5px;
+    font-weight: 400;
+    color: #a0a0a0;
+    text-align: left;
+}
+
+.page td {
+    padding: 3px 10px;
+}
+
+.page th, .page td {
+    border-right: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    border-left: 1px transparent solid;
+    border-top: 1px transparent solid;
+    box-sizing: border-box;
+}
+
+    .page th:last-child, .page td:last-child {
+        border-right: 1px transparent solid;
+    }
+
+.page .length {
+    text-align: right;
+}
+
+a {
+    color: #1ba1e2;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #13709e;
+        text-decoration: underline;
+    }
+
+.showRawException {
+    cursor: pointer;
+    color: #44c5f2;
+    background-color: transparent;
+    font-size: 1.2em;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    padding: 0;
+}
+
+.rawExceptionStackTrace {
+    font-size: 1.2em;
+}
+
+.rawExceptionBlock {
+    border-top: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+}
+
+.showRawExceptionContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.expandCollapseButton {
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    width: 16px;
+    font-size: 10px;
+    position: absolute;
+    left: 10px;
+    background-color: #eee;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>An unhandled exception occurred while processing the request.</h1>
+            <div class="titleerror">InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Boolean'.</div>
+                <p class="location">Microsoft.AspNetCore.Components.Reflection.PropertySetter.CallPropertySetter&lt;TTarget, TValue&gt;(Action&lt;TTarget, TValue&gt; setter, object target, object value)</p>
+            <div class="titleerror">InvalidOperationException: Unable to set property 'PreferExactMatches' on object of type 'Microsoft.AspNetCore.Components.Routing.Router'. The error was: Unable to cast object of type 'System.String' to type 'System.Boolean'.</div>
+                <p class="location">Microsoft.AspNetCore.Components.Reflection.ComponentProperties.&lt;SetProperties&gt;g__SetProperty|2_0(object target, PropertySetter writer, string parameterName, object value)</p>
+        <ul id="header">
+            <li id="stack" tabindex="1" class="selected">
+                Stack
+            </li>
+            <li id="query" tabindex="2">
+                Query
+            </li>
+            <li id="cookies" tabindex="3">
+                Cookies
+            </li>
+            <li id="headers" tabindex="4">
+                Headers
+            </li>
+            <li id="routing" tabindex="5">
+                Routing
+            </li>
+        </ul>
+
+        <div id="stackpage" class="page" style="">
+            <ul>
+                    <li>
+                        <h2 class="stackerror">InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Boolean'.</h2>
+                        <ul>
+                                <li class="frame" id="frame1">
+                                        <h3>Microsoft.AspNetCore.Components.Reflection.PropertySetter.CallPropertySetter&lt;TTarget, TValue&gt;(Action&lt;TTarget, TValue&gt; setter, object target, object value)</h3>
+
+                                </li>
+                                <li class="frame" id="frame2">
+                                        <h3>Microsoft.AspNetCore.Components.Reflection.ComponentProperties.&lt;SetProperties&gt;g__SetProperty|2_0(object target, PropertySetter writer, string parameterName, object value)</h3>
+
+                                </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <br>
+                        <div class="rawExceptionBlock">
+                            <div class="showRawExceptionContainer">
+                                <button class="showRawException" data-exceptiondetailid="exceptionDetail1">Show raw exception details</button>
+                            </div>
+                            <div id="exceptionDetail1" class="rawExceptionDetails" style="display: none;">
+                                <pre class="rawExceptionStackTrace">System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Boolean'.
+   at Microsoft.AspNetCore.Components.Reflection.PropertySetter.CallPropertySetter[TTarget,TValue](Action`2 setter, Object target, Object value)
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.&lt;SetProperties&gt;g__SetProperty|2_0(Object target, PropertySetter writer, String parameterName, Object value)</pre>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="stackerror">InvalidOperationException: Unable to set property 'PreferExactMatches' on object of type 'Microsoft.AspNetCore.Components.Routing.Router'. The error was: Unable to cast object of type 'System.String' to type 'System.Boolean'.</h2>
+                        <ul>
+                                <li class="frame" id="frame3">
+                                        <h3>Microsoft.AspNetCore.Components.Reflection.ComponentProperties.&lt;SetProperties&gt;g__SetProperty|2_0(object target, PropertySetter writer, string parameterName, object value)</h3>
+
+                                </li>
+                                <li class="frame" id="frame4">
+                                        <h3>Microsoft.AspNetCore.Components.Reflection.ComponentProperties.SetProperties(ref ParameterView parameters, object target)</h3>
+
+                                </li>
+                                <li class="frame" id="frame5">
+                                        <h3>Microsoft.AspNetCore.Components.ParameterView.SetParameterProperties(object target)</h3>
+
+                                </li>
+                                <li class="frame" id="frame6">
+                                        <h3>Microsoft.AspNetCore.Components.Routing.Router.SetParametersAsync(ParameterView parameters)</h3>
+
+                                </li>
+                                <li class="frame" id="frame7">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)</h3>
+
+                                </li>
+                                <li class="frame" id="frame8">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToPendingTasks(Task task)</h3>
+
+                                </li>
+                                <li class="frame" id="frame9">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.ComponentState.SetDirectParameters(ParameterView parameters)</h3>
+
+                                </li>
+                                <li class="frame" id="frame10">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InitializeNewComponentFrame(ref DiffContext diffContext, int frameIndex)</h3>
+
+                                </li>
+                                <li class="frame" id="frame11">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InitializeNewSubtree(ref DiffContext diffContext, int frameIndex)</h3>
+
+                                </li>
+                                <li class="frame" id="frame12">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(ref DiffContext diffContext, int newFrameIndex)</h3>
+
+                                </li>
+                                <li class="frame" id="frame13">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(ref DiffContext diffContext, int oldStartIndex, int oldEndIndexExcl, int newStartIndex, int newEndIndexExcl)</h3>
+
+                                </li>
+                                <li class="frame" id="frame14">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, int componentId, ArrayRange&lt;RenderTreeFrame&gt; oldTree, ArrayRange&lt;RenderTreeFrame&gt; newTree)</h3>
+
+                                </li>
+                                <li class="frame" id="frame15">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment)</h3>
+
+                                </li>
+                                <li class="frame" id="frame16">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.Renderer.RenderInExistingBatch(RenderQueueEntry renderQueueEntry)</h3>
+
+                                </li>
+                                <li class="frame" id="frame17">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()</h3>
+
+                                </li>
+                                <li class="frame" id="frame18">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)</h3>
+
+                                </li>
+                                <li class="frame" id="frame19">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()</h3>
+
+                                </li>
+                                <li class="frame" id="frame20">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessPendingRender()</h3>
+
+                                </li>
+                                <li class="frame" id="frame21">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToRenderQueue(int componentId, RenderFragment renderFragment)</h3>
+
+                                </li>
+                                <li class="frame" id="frame22">
+                                        <h3>Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged()</h3>
+
+                                </li>
+                                <li class="frame" id="frame23">
+                                        <h3>Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()</h3>
+
+                                </li>
+                                <li class="frame" id="frame24">
+                                        <h3>Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()</h3>
+
+                                </li>
+                                <li class="frame" id="frame25">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)</h3>
+
+                                </li>
+                                <li class="frame" id="frame26">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToPendingTasks(Task task)</h3>
+
+                                </li>
+                                <li class="frame" id="frame27">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.ComponentState.SetDirectParameters(ParameterView parameters)</h3>
+
+                                </li>
+                                <li class="frame" id="frame28">
+                                        <h3>Microsoft.AspNetCore.Components.RenderTree.Renderer.RenderRootComponentAsync(int componentId, ParameterView initialParameters)</h3>
+
+                                </li>
+                                <li class="frame" id="frame29">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.CreateInitialRenderAsync(Type componentType, ParameterView initialParameters)</h3>
+
+                                </li>
+                                <li class="frame" id="frame30">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.RenderComponentAsync(Type componentType, ParameterView initialParameters)</h3>
+
+                                </li>
+                                <li class="frame" id="frame31">
+                                        <h3>Microsoft.AspNetCore.Components.Rendering.RendererSynchronizationContext+&lt;&gt;c__11&lt;TResult&gt;+&lt;&lt;InvokeAsync&gt;b__11_0&gt;d.MoveNext()</h3>
+
+                                </li>
+                                <li class="frame" id="frame32">
+                                        <h3>Microsoft.AspNetCore.Mvc.ViewFeatures.StaticComponentRenderer.PrerenderComponentAsync(ParameterView parameters, HttpContext httpContext, Type componentType)</h3>
+
+                                </li>
+                                <li class="frame" id="frame33">
+                                        <h3>Microsoft.AspNetCore.Mvc.ViewFeatures.ComponentRenderer.PrerenderedServerComponentAsync(HttpContext context, ServerComponentInvocationSequence invocationId, Type type, ParameterView parametersCollection)</h3>
+
+                                </li>
+                                <li class="frame" id="frame34">
+                                        <h3>Microsoft.AspNetCore.Mvc.ViewFeatures.ComponentRenderer.RenderComponentAsync(ViewContext viewContext, Type componentType, RenderMode renderMode, object parameters)</h3>
+
+                                </li>
+                                <li class="frame" id="frame35">
+                                        <h3>Microsoft.AspNetCore.Mvc.TagHelpers.ComponentTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)</h3>
+
+                                </li>
+                                <li class="frame" id="frame36">
+                                        <h3>Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.&lt;RunAsync&gt;g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, int i, int count)</h3>
+
+                                </li>
+                                <li class="frame" id="frame37">
+                                        <h3>BlazorServerDbContextExample.Pages.Pages__Host.&lt;ExecuteAsync&gt;b__14_1() in <code title="D:\2021\lab0101\BlazorServerEFCoreSample\BlazorServerDbContextExample\Pages\_Host.cshtml">_Host.cshtml</code></h3>
+
+                                        <button class="expandCollapseButton" data-frameid="frame37">+</button>
+                                        <div class="source">
+                                                <ol start="15" class="collapsible" style="display: none;">
+                                                        <li><span>    &lt;link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" /&gt;</span></li>
+                                                        <li><span>    &lt;link href="css/site.css" rel="stylesheet" /&gt;</span></li>
+                                                        <li><span>    &lt;link href="css/contacts.css" rel="stylesheet"/&gt;</span></li>
+                                                        <li><span>&lt;/head&gt;</span></li>
+                                                        <li><span>&lt;body&gt;</span></li>
+                                                        <li><span>    &lt;app&gt;</span></li>
+                                                </ol>
+
+                                            <ol start="21" class="highlight">
+                                                    <li><span>        &lt;component type="typeof(App)" render-mode="ServerPrerendered" /&gt;</span></li>
+                                            </ol>
+
+                                                <ol start="22" class="collapsible" style="display: none;">
+                                                        <li><span>    &lt;/app&gt;</span></li>
+                                                        <li><span></span></li>
+                                                        <li><span>    &lt;div id="blazor-error-ui"&gt;</span></li>
+                                                        <li><span>        &lt;environment include="Staging,Production"&gt;</span></li>
+                                                        <li><span>            An error has occurred. This application may no longer respond until reloaded.</span></li>
+                                                        <li><span>        &lt;/environment&gt;</span></li>
+                                                </ol>
+                                        </div>
+                                </li>
+                                <li class="frame" id="frame38">
+                                        <h3>Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()</h3>
+
+                                </li>
+                                <li class="frame" id="frame39">
+                                        <h3>BlazorServerDbContextExample.Pages.Pages__Host.ExecuteAsync() in <code title="D:\2021\lab0101\BlazorServerEFCoreSample\BlazorServerDbContextExample\Pages\_Host.cshtml">_Host.cshtml</code></h3>
+
+                                        <button class="expandCollapseButton" data-frameid="frame39">+</button>
+                                        <div class="source">
+                                                <ol start="1" class="collapsible" style="display: none;">
+                                                        <li><span>@page "/"</span></li>
+                                                        <li><span>@namespace BlazorServerDbContextExample.Pages</span></li>
+                                                        <li><span>@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers</span></li>
+                                                        <li><span>@{</span></li>
+                                                </ol>
+
+                                            <ol start="5" class="highlight">
+                                                    <li><span>    Layout = null;</span></li>
+                                            </ol>
+
+                                                <ol start="6" class="collapsible" style="display: none;">
+                                                        <li><span>}</span></li>
+                                                        <li><span></span></li>
+                                                        <li><span>&lt;!DOCTYPE html&gt;</span></li>
+                                                        <li><span>&lt;html lang="en"&gt;</span></li>
+                                                        <li><span>&lt;head&gt;</span></li>
+                                                        <li><span>    &lt;meta charset="utf-8" /&gt;</span></li>
+                                                </ol>
+                                        </div>
+                                </li>
+                                <li class="frame" id="frame40">
+                                        <h3>Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)</h3>
+
+                                </li>
+                                <li class="frame" id="frame41">
+                                        <h3>Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, bool invokeViewStarts)</h3>
+
+                                </li>
+                                <li class="frame" id="frame42">
+                                        <h3>Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)</h3>
+
+                                </li>
+                                <li class="frame" id="frame43">
+                                        <h3>Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, string contentType, Nullable&lt;int&gt; statusCode)</h3>
+
+                                </li>
+                                <li class="frame" id="frame44">
+                                        <h3>Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, string contentType, Nullable&lt;int&gt; statusCode)</h3>
+
+                                </li>
+                                <li class="frame" id="frame45">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResultFilterAsync&gt;g__Awaited|29_0&lt;TFilter, TFilterAsync&gt;(ResourceInvoker invoker, Task lastTask, State next, Scope scope, object state, bool isCompleted)</h3>
+
+                                </li>
+                                <li class="frame" id="frame46">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)</h3>
+
+                                </li>
+                                <li class="frame" id="frame47">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext&lt;TFilter, TFilterAsync&gt;(ref State next, ref Scope scope, ref object state, ref bool isCompleted)</h3>
+
+                                </li>
+                                <li class="frame" id="frame48">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()</h3>
+
+                                </li>
+                                <li class="frame" id="frame49">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResourceFilter&gt;g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, object state, bool isCompleted)</h3>
+
+                                </li>
+                                <li class="frame" id="frame50">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)</h3>
+
+                                </li>
+                                <li class="frame" id="frame51">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(ref State next, ref Scope scope, ref object state, ref bool isCompleted)</h3>
+
+                                </li>
+                                <li class="frame" id="frame52">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()</h3>
+
+                                </li>
+                                <li class="frame" id="frame53">
+                                        <h3>Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)</h3>
+
+                                </li>
+                                <li class="frame" id="frame54">
+                                        <h3>Microsoft.AspNetCore.Routing.EndpointMiddleware.&lt;Invoke&gt;g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)</h3>
+
+                                </li>
+                                <li class="frame" id="frame55">
+                                        <h3>Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)</h3>
+
+                                </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <br>
+                        <div class="rawExceptionBlock">
+                            <div class="showRawExceptionContainer">
+                                <button class="showRawException" data-exceptiondetailid="exceptionDetail2">Show raw exception details</button>
+                            </div>
+                            <div id="exceptionDetail2" class="rawExceptionDetails" style="display: none;">
+                                <pre class="rawExceptionStackTrace">System.InvalidOperationException: Unable to set property 'PreferExactMatches' on object of type 'Microsoft.AspNetCore.Components.Routing.Router'. The error was: Unable to cast object of type 'System.String' to type 'System.Boolean'.
+ ---&gt; System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Boolean'.
+   at Microsoft.AspNetCore.Components.Reflection.PropertySetter.CallPropertySetter[TTarget,TValue](Action`2 setter, Object target, Object value)
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.&lt;SetProperties&gt;g__SetProperty|2_0(Object target, PropertySetter writer, String parameterName, Object value)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.&lt;SetProperties&gt;g__SetProperty|2_0(Object target, PropertySetter writer, String parameterName, Object value)
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.SetProperties(ParameterView&amp; parameters, Object target)
+   at Microsoft.AspNetCore.Components.ParameterView.SetParameterProperties(Object target)
+   at Microsoft.AspNetCore.Components.Routing.Router.SetParametersAsync(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToPendingTasks(Task task)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SetDirectParameters(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InitializeNewComponentFrame(DiffContext&amp; diffContext, Int32 frameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InitializeNewSubtree(DiffContext&amp; diffContext, Int32 frameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext&amp; diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext&amp; diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.RenderInExistingBatch(RenderQueueEntry renderQueueEntry)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessPendingRender()
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToRenderQueue(Int32 componentId, RenderFragment renderFragment)
+   at Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToPendingTasks(Task task)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SetDirectParameters(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.RenderRootComponentAsync(Int32 componentId, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.CreateInitialRenderAsync(Type componentType, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.RenderComponentAsync(Type componentType, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.RendererSynchronizationContext.&lt;&gt;c__11`1.&lt;&lt;InvokeAsync&gt;b__11_0&gt;d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.StaticComponentRenderer.PrerenderComponentAsync(ParameterView parameters, HttpContext httpContext, Type componentType)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ComponentRenderer.PrerenderedServerComponentAsync(HttpContext context, ServerComponentInvocationSequence invocationId, Type type, ParameterView parametersCollection)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ComponentRenderer.RenderComponentAsync(ViewContext viewContext, Type componentType, RenderMode renderMode, Object parameters)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ComponentTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.&lt;RunAsync&gt;g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at BlazorServerDbContextExample.Pages.Pages__Host.&lt;ExecuteAsync&gt;b__14_1() in D:\2021\lab0101\BlazorServerEFCoreSample\BlazorServerDbContextExample\Pages\_Host.cshtml:line 21
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at BlazorServerDbContextExample.Pages.Pages__Host.ExecuteAsync() in D:\2021\lab0101\BlazorServerEFCoreSample\BlazorServerDbContextExample\Pages\_Host.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResultFilterAsync&gt;g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResourceFilter&gt;g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.&lt;Invoke&gt;g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)</pre>
+                            </div>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+
+        <div id="querypage" class="page" style="display: none;">
+                <p>No query string data.</p>
+        </div>
+
+        <div id="cookiespage" class="page" style="display: none;">
+                <p>No cookie data.</p>
+        </div>
+
+        <div id="headerspage" class="page" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                <tr>
+                                    <td>Accept</td>
+                                    <td>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Encoding</td>
+                                    <td>gzip, deflate, br</td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Language</td>
+                                    <td>en-US,en;q=0.9</td>
+                                </tr>
+                                <tr>
+                                    <td>Cache-Control</td>
+                                    <td>no-cache</td>
+                                </tr>
+                                <tr>
+                                    <td>Connection</td>
+                                    <td>close</td>
+                                </tr>
+                                <tr>
+                                    <td>Host</td>
+                                    <td>localhost:44318</td>
+                                </tr>
+                                <tr>
+                                    <td>Pragma</td>
+                                    <td>no-cache</td>
+                                </tr>
+                                <tr>
+                                    <td>sec-fetch-dest</td>
+                                    <td>document</td>
+                                </tr>
+                                <tr>
+                                    <td>sec-fetch-mode</td>
+                                    <td>navigate</td>
+                                </tr>
+                                <tr>
+                                    <td>sec-fetch-site</td>
+                                    <td>none</td>
+                                </tr>
+                                <tr>
+                                    <td>sec-fetch-user</td>
+                                    <td>?1</td>
+                                </tr>
+                                <tr>
+                                    <td>upgrade-insecure-requests</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>User-Agent</td>
+                                    <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36</td>
+                                </tr>
+                    </tbody>
+                </table>
+        </div>
+
+        <div id="routingpage" class="page" style="display: none;">
+            <h2 class="subheader">Endpoint</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Display Name</td>
+                            <td>/_Host</td>
+                        </tr>
+                            <tr>
+                                <td>Route Order</td>
+                                <td>0</td>
+                            </tr>
+                    </tbody>
+                </table>
+            <h2 class="subheader">Route Values</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>page</td>
+                                <td>/_Host</td>
+                            </tr>
+                    </tbody>
+                </table>
+        </div>
+
+        <script>
+            //<!--
+            (function (window, undefined) {
+    "use strict";
+
+    function ns(selector, element) {
+        return new NodeCollection(selector, element);
+    }
+
+    function NodeCollection(selector, element) {
+        this.items = [];
+        element = element || window.document;
+
+        var nodeList;
+
+        if (typeof (selector) === "string") {
+            nodeList = element.querySelectorAll(selector);
+            for (var i = 0, l = nodeList.length; i < l; i++) {
+                this.items.push(nodeList.item(i));
+            }
+        }
+    }
+
+    NodeCollection.prototype = {
+        each: function (callback) {
+            for (var i = 0, l = this.items.length; i < l; i++) {
+                callback(this.items[i], i);
+            }
+            return this;
+        },
+
+        children: function (selector) {
+            var children = [];
+
+            this.each(function (el) {
+                children = children.concat(ns(selector, el).items);
+            });
+
+            return ns(children);
+        },
+
+        hide: function () {
+            this.each(function (el) {
+                el.style.display = "none";
+            });
+
+            return this;
+        },
+
+        toggle: function () {
+            this.each(function (el) {
+                el.style.display = el.style.display === "none" ? "" : "none";
+            });
+
+            return this;
+        },
+
+        show: function () {
+            this.each(function (el) {
+                el.style.display = "";
+            });
+
+            return this;
+        },
+
+        addClass: function (className) {
+            this.each(function (el) {
+                var existingClassName = el.className,
+                    classNames;
+                if (!existingClassName) {
+                    el.className = className;
+                } else {
+                    classNames = existingClassName.split(" ");
+                    if (classNames.indexOf(className) < 0) {
+                        el.className = existingClassName + " " + className;
+                    }
+                }
+            });
+
+            return this;
+        },
+
+        removeClass: function (className) {
+            this.each(function (el) {
+                var existingClassName = el.className,
+                    classNames, index;
+                if (existingClassName === className) {
+                    el.className = "";
+                } else if (existingClassName) {
+                    classNames = existingClassName.split(" ");
+                    index = classNames.indexOf(className);
+                    if (index > 0) {
+                        classNames.splice(index, 1);
+                        el.className = classNames.join(" ");
+                    }
+                }
+            });
+
+            return this;
+        },
+
+        attr: function (name) {
+            if (this.items.length === 0) {
+                return null;
+            }
+
+            return this.items[0].getAttribute(name);
+        },
+
+        on: function (eventName, handler) {
+            this.each(function (el, idx) {
+                var callback = function (e) {
+                    e = e || window.event;
+                    if (!e.which && e.keyCode) {
+                        e.which = e.keyCode; // Normalize IE8 key events
+                    }
+                    handler.apply(el, [e]);
+                };
+
+                if (el.addEventListener) { // DOM Events
+                    el.addEventListener(eventName, callback, false);
+                } else if (el.attachEvent) { // IE8 events
+                    el.attachEvent("on" + eventName, callback);
+                } else {
+                    el["on" + type] = callback;
+                }
+            });
+
+            return this;
+        },
+
+        click: function (handler) {
+            return this.on("click", handler);
+        },
+
+        keypress: function (handler) {
+            return this.on("keypress", handler);
+        }
+    };
+
+    function frame(el) {
+        ns(".source .collapsible", el).toggle();
+    }
+
+    function expandCollapseButton(el) {
+        var frameId = el.getAttribute("data-frameId");
+        frame(document.getElementById(frameId));
+        if (el.innerText === "+") {
+            el.innerText = "-";
+        }
+        else {
+            el.innerText = "+";
+        }
+    }
+
+    function tab(el) {
+        var unselected = ns("#header .selected").removeClass("selected").attr("id");
+        var selected = ns("#" + el.id).addClass("selected").attr("id");
+
+        ns("#" + unselected + "page").hide();
+        ns("#" + selected + "page").show();
+    }
+
+    ns(".rawExceptionDetails").hide();
+    ns(".collapsible").hide();
+    ns(".page").hide();
+    ns("#stackpage").show();
+
+    ns(".expandCollapseButton")
+        .click(function () {
+            expandCollapseButton(this);
+        })
+        .keypress(function (e) {
+            if (e.which === 13) {
+                expandCollapseButton(this);
+            }
+        });
+
+    ns("#header li")
+        .click(function () {
+            tab(this);
+        })
+        .keypress(function (e) {
+            if (e.which === 13) {
+                tab(this);
+            }
+        });
+
+    ns(".showRawException")
+        .click(function () {
+            var exceptionDetailId = this.getAttribute("data-exceptionDetailId");
+            ns("#" + exceptionDetailId).toggle();
+        });
+})(window);
+            //-->
+        </script>
+    
+
+</body></html>
