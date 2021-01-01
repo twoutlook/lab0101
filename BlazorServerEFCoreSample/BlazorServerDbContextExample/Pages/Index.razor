@@ -65,28 +65,37 @@
         </div>
         @if (Filters.Loading || Contacts == null)
         {
-            <div class="row">
-                <div class="col-12 alert alert-info">
-                    Loading...
-                </div>
-            </div>
-        }
+    <div class="row">
+        <div class="col-12 alert alert-info">
+            Loading...
+        </div>
+    </div>}
         @if (Contacts != null && Contacts.Count == 0)
         {
-            <div class="row">
-                <div class="col-12 alert alert-warning">
-                    No contacts found.
-                </div>
-            </div>
-        }
+    <div class="row">
+        <div class="col-12 alert alert-warning">
+            No contacts found.
+        </div>
+    </div>}
         @if (Contacts != null)
         {
-            @foreach (var contact in Contacts)
-            {
-                <ContactRow @key=contact CurrentContact="@contact"
-                            DeleteContact="DeleteContactAsync" />
-            }
-        }
+    @foreach (var contact in Contacts)
+    {
+    <ContactRow @key=contact CurrentContact="@contact"
+                DeleteContact="DeleteContactAsync" />}}
+        <div class="row">
+            <div class="col-6">
+                <hr />
+                Note by Mark, 2021-01-01
+                <ul>
+                    <li>Fix01: removed  PreferExactMatches="true" from App.razor </li>
+                    <li>Fix02: show 10 records per page instead of 20 </li>
+
+                </ul>
+
+            </div>
+            <div class="col-6"></div>
+        </div>
     </div>
 </GridWrapper>
 

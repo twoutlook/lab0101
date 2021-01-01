@@ -1,0 +1,12 @@
+
+【2021-01-01】
+編程寫程式要多參考網上的交流,
+自主開發只專注在項目的核心領域,
+底層技術要回歸官網的合理更新,
+架構時的一些技術要有正確的觀念引導。
+
+這個範例顯示了 Blazor 在處理類似的操作,
+在上百上升以上的數據,如何增刪改查。
+
+
+https://docs.microsoft.com/en-us/aspnet/core/blazor/blazor-server-ef-core?view=aspnetcore-5.0

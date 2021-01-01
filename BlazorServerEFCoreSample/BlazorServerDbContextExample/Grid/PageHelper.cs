@@ -8,7 +8,9 @@
         /// <summary>
         /// Items on a page.
         /// </summary>
-        public int PageSize { get; set; } = 20;
+        //public int PageSize { get; set; } = 20;
+        public int PageSize { get; set; } = 10; //NOTE by Mark, 2021-01-01
+
 
         /// <summary>
         /// Current page, 1-based.
