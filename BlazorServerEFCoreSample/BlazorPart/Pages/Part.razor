@@ -1,0 +1,31 @@
+﻿@page "/part"
+
+@using Microsoft.EntityFrameworkCore
+@*@inject IDbContextFactory<TaiweiContext> DbFactory*@
+
+<h1>Part</h1>
+<ol>
+    @foreach (var part in parts)
+    {
+        <li>
+            @part.Cpartnumber
+        </li>
+
+    }
+
+</ol>
+
+@code{
+
+    TaiweiContext db = new TaiweiContext();
+    //  TaiweiContext db = dbFactory.CreateDbContext();
+
+
+    private List<BasePart> parts;
+
+    protected override void OnInitialized()
+    {
+        //using var db = DbFactory.CreateDbContext();
+        parts = db.BasePart.OrderBy(x => x.Cpartnumber).ToList();
+    }
+}
